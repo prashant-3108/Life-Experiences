@@ -1,0 +1,110 @@
+a:link:hover {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-decoration: underline;
+  cursor: pointer;
+  cursor: hand;
+}
+
+input[type="submit"],
+button {
+  cursor: pointer;
+  cursor: hand;
+}
+
+* {
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  background: url(https://9to5google.com/wp-content/uploads/sites/4/2021/01/Image-9.jpg)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+html {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* background-color: black; */
+
+  background: url(https://9to5google.com/wp-content/uploads/sites/4/2021/01/Image-9.jpg)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1,
+h3,
+h5 {
+  margin-left: 20px;
+  font-weight: 700;
+  color: wheat;
+}
+div,
+span {
+  margin: 5px;
+}
+
+table,
+th {
+  align-content: center;
+  width: 1090px;
+  border: 0.2px solid black;
+  border-collapse: collapse;
+}
+
+p {
+  margin-left: 8px;
+}
+
+tr {
+  border: solid;
+  border-width: 1px 0;
+}
+
+table td {
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  text-align: center;
+
+  font-size: 25px;
+  color: aliceblue;
+
+  border: 3px solid rgb(231, 158, 158);
+  width: max-content;
+}
+
+table th {
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  text-align: center;
+
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(243, 223, 113);
+
+  border: 3px solid rgb(231, 158, 158);
+  width: max-content;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flex-child {
+  -webkit-box-flex: 1 1 auto;
+  -moz-box-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}

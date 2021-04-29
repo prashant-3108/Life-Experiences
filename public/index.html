@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>My Experiences</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Demo Website" />
+  <meta name="keywords" content="Demo Website" />
+  <meta name="author" content="Demo Website" />
+  <!-- Load jquery, bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <!-- Custom CSS End -->
+</head>
+
+<body>
+  <!--  -->
+
+  <div id="Personal" style="height: 1200px">
+    <div style="margin-top: 15px">
+      <h1 style="
+            font-family: 'Times New Roman', Times, serif;
+            color: rgb(242, 237, 245);
+            font-weight: bolder;
+          ">
+        Welcome to Your Personal Locker
+      </h1>
+
+
+      <div>
+        <h3>A Unique portal to cherish your Life Experiences. 😀</h3>
+      </div>
+
+
+      <br />
+      <br />
+
+      <div class="flex" style="margin-left: 230px">
+        <button id="login" type="button" class="btn btn-light">LOGIN</button>
+
+        <button style="margin-left: 30px" id="signup" type="button" class="btn btn-light">
+          SIGNUP
+        </button>
+      </div>
+
+      <br />
+
+      <div id="login_form" hidden="true">
+        <div style="width: 500px">
+          <form ref="NameForm" id="login_credentials">
+            <div class="form-group">
+              <div>
+                <label for="username" style="
+                      font-size: 18px;
+                      font-weight: bold;
+                      margin-left: 8px;
+                      color: white;
+                    ">Enter the Email Address.
+                </label>
+                <input type="text" class="form-control" id="username" placeholder="name@xyz.com" required />
+              </div>
+              <div>
+                <label for="password" style="
+                      font-size: 18px;
+                      font-weight: bold;
+                      margin-left: 8px;
+                      color: white;
+                    ">Enter the Password.
+                </label>
+                <input type="password" class="form-control" id="password" placeholder="Username" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <input style="
+                    background-color: rgb(52, 170, 36);
+                    margin-left: 8px;
+                    font-weight: bolder;
+                  " value="LOGIN" type="submit" class="btn btn-secondary" />
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div id="signup_form" hidden="true">
+        <div style="width: 500px">
+          <form ref="NameForm" id="signup_credentials">
+            <div class="form-group">
+              <div>
+                <label for="full_name" style="
+                      font-size: 18px;
+                      font-weight: bold;
+                      margin-left: 8px;
+                      color: white;
+                    ">Enter the Full Name.
+                </label>
+                <input type="text" class="form-control" id="name" placeholder="Name" required />
+              </div>
+              <div>
+                <label for="S_username" style="
+                      font-size: 18px;
+                      font-weight: bold;
+                      margin-left: 8px;
+                      color: white;
+                    ">Enter the Email Address.
+                </label>
+                <input type="text" class="form-control" id="S_username" placeholder="name@xyz.com" required />
+              </div>
+              <div>
+                <label for="S_password" style="
+                      font-size: 18px;
+                      font-weight: bold;
+                      margin-left: 8px;
+                      color: white;
+                    ">Enter the Password.
+                </label>
+                <input type="password" class="form-control" id="S_password" placeholder="password" required />
+              </div>
+              <div>
+                <label for="confirm_password" style="
+                      font-size: 18px;
+                      font-weight: bold;
+                      margin-left: 8px;
+                      color: white;
+                    ">Re-Enter the Password.
+                </label>
+                <input type="password" class="form-control" id="confirm_password" placeholder="confirm password"
+                  required />
+              </div>
+            </div>
+            <div class="form-group">
+              <input style="
+                    background-color: rgb(52, 170, 36);
+                    margin-left: 8px;
+                    font-weight: bolder;
+                  " value="SIGNUP" type="submit" class="btn btn-secondary" />
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <br />
+
+
+      <div id="all" hidden="true">
+
+        <div id="user_id" hidden="true">
+          <h3 id="user_id_num"></h3>
+        </div>
+
+        <br>
+
+        <div id="no_secrets" hidden="true" style="margin-left:125px">
+          <h3 id="display_no_secrets"></h3>
+        </div>
+
+        <br />
+
+        <div>
+          <h3 id="header_exp" hidden="true" style="margin-left: 20px">
+            Experiences 😇
+          </h3>
+        </div>
+
+        <br />
+
+        <div id="Experiences" hidden="true">
+          <div class="row">
+            <div class="col">
+              <table id="all_experiences"></table>
+            </div>
+          </div>
+        </div>
+
+
+
+        <br />
+        <br />
+
+        <h3>Added Something New to Your Experiences? 😇</h3>
+        <br />
+
+        <div class="flex" style="margin-left: 250px">
+          <button id="add_experience" type="button" class="btn btn-light">
+            Add Experience
+          </button>
+        </div>
+
+        <br />
+
+        <div id="experience_form" hidden="true">
+          <div style="width: 500px">
+            <form ref="NameForm" id="experience">
+              <div class="form-group">
+                <div>
+                  <label for="USER_ID" style="
+                font-size: 18px;
+                font-weight: bold;
+                margin-left: 8px;
+                color: white;
+              ">
+                    Enter the User ID mentioned above.
+                  </label>
+                  <input type="text" class="form-control" id="USER_ID" placeholder="#1" required />
+                </div>
+                <div>
+                  <label for="experience" style="
+                font-size: 18px;
+                font-weight: bold;
+                margin-left: 8px;
+                color: white;
+              ">Enter Your New Experience.
+                  </label>
+                  <textarea id="exp" name="paragraph_text" cols="100" rows="7" style="
+                font-size: 20px;
+                background-color: rgb(213, 248, 236);
+              "></textarea>
+                </div>
+                <div class="form-group">
+                  <input style="
+                background-color: rgb(52, 170, 36);
+                margin-left: 8px;
+                font-weight: bolder;
+              " value="ADD" type="submit" class="btn btn-secondary" />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <br />
+        <br />
+
+        <h3>Did a mistake? Edit Your Experiences! 😉 </h3>
+        <br />
+
+        <div class="flex" style="margin-left: 250px">
+          <button id="edit_experience" type="button" class="btn btn-light">
+            Edit Experience
+          </button>
+        </div>
+
+        <br />
+
+        <div id="EDIT_EXP" hidden="true">
+          <div style="width: 500px">
+            <form ref="NameForm" id="update_experience">
+              <div class="form-group">
+                <div>
+                  <label for="U_USER_ID" style="
+                font-size: 18px;
+                font-weight: bold;
+                margin-left: 8px;
+                color: white;
+              ">
+                    Enter the User ID mentioned above.
+                  </label>
+                  <input type="text" class="form-control" id="U_USER_ID" placeholder="#1" required />
+                </div>
+                <div>
+                  <label for="U_exp_id" style="
+                font-size: 18px;
+                font-weight: bold;
+                margin-left: 8px;
+                color: white;
+              ">
+                    Enter Experience Number from the table.
+                  </label>
+                  <input type="text" class="form-control" id="U_exp_id" placeholder="#1" required />
+                </div>
+
+                <div>
+                  <textarea id="update_exp" name="paragraph_text" cols="100" rows="7" style="
+                font-size: 20px;
+                background-color: rgb(213, 248, 236);
+              "></textarea>
+                </div>
+
+                <div class="form-group">
+                  <input style="
+                background-color: rgb(233, 67, 67);
+                margin-left: 8px;
+                margin-top: 8px;
+                font-weight: bolder;
+              " value="EDIT" type="submit" class="btn btn-secondary" />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <br>
+        <br>
+
+
+        <h3>Delete Your Experiences? 😟 </h3>
+        <br />
+
+        <div class="flex" style="margin-left: 250px">
+          <button id="del_experience" type="button" class="btn btn-light">
+            Delete Experience
+          </button>
+        </div>
+
+        <br />
+
+        <div id="DELETE_EXP" hidden="true">
+          <div style="width: 500px">
+            <form ref="NameForm" id="delete_experience">
+              <div class="form-group">
+                <div>
+                  <label for="D_USER_ID" style="
+                font-size: 18px;
+                font-weight: bold;
+                margin-left: 8px;
+                color: white;
+              ">
+                    Enter the User ID mentioned above.
+                  </label>
+                  <input type="text" class="form-control" id="D_USER_ID" placeholder="#1" required />
+                </div>
+                <div>
+                  <label for="exp_id" style="
+                font-size: 18px;
+                font-weight: bold;
+                margin-left: 8px;
+                color: white;
+              ">
+                    Enter Experience Number from the table.
+                  </label>
+                  <input type="text" class="form-control" id="exp_id" placeholder="#1" required />
+                </div>
+
+                <div class="form-group">
+                  <input style="
+                background-color: rgb(233, 67, 67);
+                margin-left: 8px;
+                margin-top: 8px;
+                font-weight: bolder;
+              " value="DELETE" type="submit" class="btn btn-secondary" />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+
+        <!-- /* Update */ -->
+        <br>
+        <br>
+
+        
+        
+        <div id="LOGOUT" hidden="true">
+          <h5>
+            Logout? 🚪
+          </h5>
+          <br>
+          <div>
+            <form ref="NameForm" id="logout">
+              <div class="form-group" style="margin-left: 20px;">
+                <input style="
+              background-color: rgb(231, 15, 15);
+              margin-left: 8px;
+              font-weight: bolder;
+            " value="LOGOUT" type="submit" class="btn btn-secondary" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+
+      <br />
+      <br />
+
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <!-- Leave me at the bottom of body -->
+  <script src="/index.js"></script>
+</body>
+
+</html>
